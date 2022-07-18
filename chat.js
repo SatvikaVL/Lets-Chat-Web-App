@@ -23,11 +23,6 @@ function addUser()
     firebase.database().ref("/").child(user_name).update({
         purpose : "adding user"
     });
-    /*
-    localStorage.setItem("user_name", user_name);
-    
-    window.location = "chat_room.html";
-    */
     localStorage.setItem("user_name", user_name);
     window.location = "chat_room.html";
 }
