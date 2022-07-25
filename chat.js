@@ -1,21 +1,17 @@
 // Your web app's Firebase configuration
+//ADD YOUR FIREBASE LINKS HERE
 var firebaseConfig = {
-    apiKey: "AIzaSyAW9JVL2mQzszCxrK41j3sgvDkHKAM3qqM",
-    authDomain: "lets-chat-web-app-db.firebaseapp.com",
-    databaseURL: "https://lets-chat-web-app-db-default-rtdb.firebaseio.com",
-    projectId: "lets-chat-web-app-db",
-    storageBucket: "lets-chat-web-app-db.appspot.com",
-    messagingSenderId: "186220052518",
-    appId: "1:186220052518:web:e1b365e1de945de30da6e7"
+    apiKey: "AIzaSyB0mWqGGVtWTvIYRawg5IunQnBRJ2rV3lU",
+    authDomain: "let-s-chat-web-app-47a01.firebaseapp.com",
+    databaseURL: "https://let-s-chat-web-app-47a01-default-rtdb.firebaseio.com",
+    projectId: "let-s-chat-web-app-47a01",
+    storageBucket: "let-s-chat-web-app-47a01.appspot.com",
+    messagingSenderId: "843947927628",
+    appId: "1:843947927628:web:da627a8c1a864fbdd4ece9"
   };
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-//ADD YOUR FIREBASE LINKS HERE
-
-
-
-
 
 function addUser()
 {
@@ -23,8 +19,11 @@ function addUser()
     firebase.database().ref("/").child(user_name).update({
         purpose : "adding user"
     });
+    
     localStorage.setItem("user_name", user_name);
+
     window.location = "chat_room.html";
+    
 }
 
 
